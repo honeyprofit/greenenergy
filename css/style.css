@@ -1,0 +1,941 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.squada{
+    font-family: "Squada One", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.wrap1_top h2{
+    color: #FFF;
+    font-size: 120px;
+    line-height: .8;
+    opacity: 0;
+}
+.wrap1_top span{
+    color: #FFF;
+    font-size: 180px;
+    letter-spacing: 9px;
+    line-height: .8;
+    opacity: 0;
+}
+.wrap{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0.25turn, #57CCD9, #CEEAF2);
+}
+.arrow{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    width: 160px;
+    height: 166px;
+    z-index: 10;
+    cursor: pointer;
+}
+.arrow img{
+    animation: arrowAni 1s infinite linear;
+    opacity: .7;
+}
+@keyframes arrowAni {
+    0% {transform: translateX(0);
+        opacity: 0.5;}
+    50% {transform: translateX(10px);
+        opacity: 0.7;}
+    100% {transform: translateX(0);     
+        opacity: 0.5;}
+}
+ul.screen_whole{
+    width: 200%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0; /* 화면이동 */
+    top: 0;
+}
+ul.screen_whole li.screen{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* main 시작 */
+.wrap1_top .title_box{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    right: 20%;
+    bottom: 55%;
+}
+
+.wrap1_top{
+    width: 100%;
+    height: calc(100% - 140px);
+    position: relative;
+}
+
+.plane{
+    width: 700px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 78px;
+    background-image: url(../images/main/plane_trace.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    animation: planeAni 15s infinite linear;
+}
+@keyframes planeAni {
+    0% {left: -600px;}
+    69% {left: 100%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    70% {left: 100%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    100% {left: 0;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+}
+.plane img{
+    position: absolute;
+    right: 10px;
+    bottom: -3px;
+}
+
+
+.tower_back_shadow{
+    width: 938px;
+    height: 590px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url(../images/main/tower_back_shadow.png);
+    opacity: .8;
+}
+.tower_back{
+    width: 734px;
+    height: 667px;
+    position: absolute;
+    left: 54px;
+    bottom: 0;
+    background-image: url(../images/main/tower_back.png);
+}
+.bridge{
+    width: 100%;
+    height: 69px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url(../images/main/bridge.png);
+}
+.building_front{
+    width: 896px;
+    height: 361px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url(../images/main/building_front.png);
+}
+.bridge img{
+    width: 971px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+    top: -40px;
+    animation: trainAni 25s infinite linear;
+}
+@keyframes trainAni {
+    0% {left: 0;}
+    50% {left: 100%;}
+    100% {left: 0;}
+}
+.trees{
+    width: 956px;
+    height: 83px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url(../images/main/trees_plants.png);
+}
+
+.wrap1_road{
+    width: 100%;
+    height: 140px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.car1{
+    width: 95px;
+    height: 52px;
+    position: absolute;
+    left: 0;
+    bottom: 108px;
+    background-image: url(../images/main/car1.png);
+    animation: car1Ani 25s infinite linear;
+}
+@keyframes car1Ani {
+    0% {left: 0;}
+    49% {left: 50%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    50% {left: 50%;   
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    100% {left: 0;  
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+}
+
+.car2{
+    width: 95px;
+    height: 51px;
+    position: absolute;
+    left: 160px;
+    bottom: 99px;
+    background-image: url(../images/main/car2.png);
+    animation: car2Ani 25s infinite linear;
+}
+@keyframes car2Ani {
+    0% {left: 10%;}
+    9% {left: 0%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    10% {left: 0%;   
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    69% {left: 60%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    70% {left: 60%;   
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    100% {left: 10%;  
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+}
+
+.car3{
+    width: 104px;
+    height: 50px;
+    position: absolute;
+    left: 160px;
+    bottom: 47px;
+    background-image: url(../images/main/car3.png);
+    animation: car3Ani 20s infinite linear;
+}
+@keyframes car3Ani {
+    0% {left: 50%;}
+    45% {left: 0%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    46% {left: 0%;   
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    89% {left: 60%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    90% {left: 60%;   
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    100% {left: 50%;  
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+}
+
+.cloud1{
+    width: 114px;
+    height: 30px;
+    position: absolute;
+    top: 514px;
+    right: 826px;
+    background-image: url(../images/main/cloud1.png);
+    animation: cloud1Ani 24s infinite linear;
+}
+@keyframes cloud1Ani {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(200px);}
+    100% {transform: translateX(0);}
+}
+.cloud2{
+    width: 131px;
+    height: 37px;
+    position: absolute;
+    top: 530px;
+    right: 647px;
+    background-image: url(../images/main/cloud2.png);
+    animation: cloud2Ani 30s infinite linear;
+    opacity: .9;
+}
+@keyframes cloud2Ani {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(300px);}
+    100% {transform: translateX(0);}
+}
+.cloud3{
+    width: 121px;
+    height: 43px;
+    position: absolute;
+    top: 430px;
+    right: 647px;
+    background-image: url(../images/main/cloud3.png);
+    animation: cloud3Ani 30s infinite linear;
+    opacity: .7;
+}
+@keyframes cloud3Ani {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-200px);}
+    100% {transform: translateX(0);}
+}
+.cloud4{
+    width: 94px;
+    height: 28px;
+    position: absolute;
+    top: 480px;
+    right: 368px;
+    background-image: url(../images/main/cloud4.png);
+    animation: cloud4Ani 30s infinite linear;
+    opacity: .7;
+}
+@keyframes cloud4Ani {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(300px);}
+    100% {transform: translateX(0);}
+}
+
+
+/* 두번째 슬라이드 시작*/
+.wrap2_top{
+    width: 100%;
+    height: calc(100% - 378px);
+    position: relative;
+}
+.wrap2_top .title_box{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 10%;
+    bottom: 45%;
+}
+.wrap2_top h2{
+    color: #FFF;
+    font-size: 160px;
+    line-height: .8;
+    opacity: 0;
+}
+.wrap2_top span{
+    color: #FFF;
+    font-size: 120px;
+    letter-spacing: 6px;
+    line-height: .8;
+    opacity: 0;
+}
+.bg_mountain{
+    width: 1456px;
+    height: 510px;
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+    background-image: url(../images/sub/bg_mountain.png);
+}
+.bg_back{
+    width: 1919px;
+    height: 248px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(../images/sub/bg_back.png);
+}
+
+.cloud2_1{
+    width: 291px;
+    height: 86px;
+    position: absolute;
+    bottom: 480px;
+    right: 50%;
+    background-image: url(../images/sub/cloud1.png);
+    animation: cloud21Ani 30s infinite linear;
+}
+@keyframes cloud21Ani {
+    0%,100% {transform: translateX(0);}
+    50% {transform: translateX(260px);}
+}
+.cloud2_2{
+    width: 46px;
+    height: 18px;
+    position: absolute;
+    bottom: 480px;
+    right: 50%;
+    background-image: url(../images/sub/cloud2.png);
+    animation: cloud22Ani 30s infinite linear;
+}
+@keyframes cloud22Ani {
+    0%,100% {transform: translateX(100px);}
+    50% {transform: translateX(-100px);}
+}
+.cloud2_3{
+    width: 197px;
+    height: 56px;
+    position: absolute;
+    bottom: 480px;
+    right: 30%;
+    background-image: url(../images/sub/cloud3.png);
+    animation: cloud23Ani 30s infinite linear;
+}
+@keyframes cloud23Ani {
+    0%,100% {transform: translateX(0);}
+    50% {transform: translateX(260px);}
+}
+.cloud2_4{
+    width: 111px;
+    height: 42px;
+    position: absolute;
+    bottom: 480px;
+    right: 20%;
+    background-image: url(../images/sub/cloud4.png);
+    animation: cloud24Ani 30s infinite linear;
+}
+@keyframes cloud24Ani {
+    0%,100% {transform: translateX(200px);}
+    50% {transform: translateX(-100px);}
+}
+.cloud2_5{
+    width: 49px;
+    height: 17px;
+    position: absolute;
+    bottom: 480px;
+    right: 24%;
+    background-image: url(../images/sub/cloud5.png);
+    animation: cloud25Ani 30s infinite linear;
+}
+@keyframes cloud25Ani {
+    0%,100% {transform: translateX(0);}
+    50% {transform: translateX(260px);}
+}
+.wind_generator{
+    width: 100px;
+    height: 206px;
+    position: absolute;
+    background-image: url(../images/sub/pole.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.wind1{
+    bottom: 60px;
+    right: 20%;
+    cursor: pointer;
+}
+.wind1::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    animation: blink 1s infinite;
+}
+.wind2{
+    bottom: 60px;
+    right: 16%;
+}
+.wind3{
+    bottom: 60px;
+    right: 12%;
+}
+.wind_generator img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center center;
+    animation: windRotate .3s infinite linear;
+}
+.wind1 img{
+    animation: none;
+}
+@keyframes windRotate {
+    0% {transform: translateX(-50%) rotate(0deg);}
+    100% {transform: translateX(-50%) rotate(360deg);}
+}
+
+
+
+.bg_front{
+    width: 1729px;
+    height: 261px;
+    position: absolute;
+    bottom: -42px;
+    right: 0;
+    background-image: url(../images/sub/bg_front.png);
+}
+.wrap2_land{
+    width: 100%;
+    height: 378px;
+    background: rgba(255,255,255,.9);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.yacht{
+    width: 74px;
+    height: 114px;
+    background-image: url(../images/sub/yacht.png);
+    position: absolute;
+    right: 843px;
+    bottom: 0;
+    cursor: pointer;
+}
+.yacht::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff; /* 삼각형 색상 */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        top: -20px;
+        opacity: 1;
+    }
+    50% {
+        top: -30px;
+        opacity: 0.5;
+    }
+}
+.balloon{
+    width: 68px;
+    height: 96px;
+    background-image: url(../images/sub/balloon.png);
+    position: absolute;
+    right: 50%;
+    bottom: 340px;
+    cursor: pointer;
+}
+.balloon::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    animation: blink 1s infinite;
+}
+
+.front_lake{
+    width: 1456px;
+    height: 167px;
+    background-image: url(../images/sub/front_lake.png);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* dad */
+.dad{
+    width: 202px;
+    height: 215px;
+    position: absolute;
+    left: 0;
+    bottom: 140px;
+    background-image: url(../images/sub/dad_shadow.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: dadAni 15s infinite linear;
+}
+@keyframes dadAni {
+    0%, 100% {left: 10%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    50% {left: 50%;   
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    51% {left: 50%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    99% {left: 10%;   
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+}
+.dad_wheel{
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    background-image: url(../images/sub/dad_wheel.png);
+    background-repeat: no-repeat;
+    animation: wheelRotate .3s infinite linear;
+}
+@keyframes wheelRotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.leftWheel{
+    left: 0;
+    transform: rotate(-30deg);
+    bottom: 0;
+}
+.rightWheel{
+    right: 0;
+    bottom: 0;
+    transform: rotate(30deg);
+}
+.dad_left{
+    width: 62px;
+    height: 101px;
+    position: absolute;
+    left: 55px;
+    bottom: 23px;
+    background-image: url(../images/sub/dadleft_before1.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.dad_left.after {
+    background-image: url(../images/sub/dadleft_after1.png);
+}
+.dad_bike{
+    width: 134px;
+    height: 96px;
+    position: absolute;
+    left: 31px;
+    bottom: 20px;
+    background-image: url(../images/sub/dad_bike.png);
+    background-repeat: no-repeat;
+}
+.dad_right{
+    width: 70px;
+    height: 101px;
+    position: absolute;
+    left: 54px;
+    bottom: 25px;
+    background-image: url(../images/sub/dadright_before.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.dad_right.after {
+    background-image: url(../images/sub/dadright_after.png);
+}
+.dad_body{
+    width: 99px;
+    height: 104px;
+    position: absolute;
+    left: 56px;
+    bottom: 111px;
+    background-image: url(../images/sub/dad_body.png);
+    background-repeat: no-repeat;
+}
+/* boy */
+.boy{
+    width: 148px;
+    height: 180px;
+    position: absolute;
+    left: 60%;
+    bottom: 90px;
+    background-image: url(../images/sub/boy_shadow.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    cursor: pointer;
+    /* animation: boyAni 15s infinite linear; */
+}
+.boy::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ccc;
+    animation: blink 1s infinite;
+}
+@keyframes boyAni {
+    0%, 100% {left: 60%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    50% {left: 90%;   
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    51% {left: 90%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    99% {left: 60%;   
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+}
+.boy_wheel{
+    width: 51px;
+    height: 51px;
+    position: absolute;
+    background-image: url(../images/sub/boy_wheel.png);
+    background-repeat: no-repeat;
+    animation: wheelRotate .3s infinite linear;
+}
+.boy .leftWheel{
+    left: 4px;
+    transform: rotate(-30deg);
+    bottom: 0;
+}
+.boy .rightWheel{
+    right: 0;
+    bottom: 0;
+    transform: rotate(30deg);
+}
+.boy_left{
+    width: 48px;
+    height: 82px;
+    position: absolute;
+    left: 49px;
+    bottom: 18px;
+    background-image: url(../images/sub/boyleft_before.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.boy_left.after {
+    background-image: url(../images/sub/boyleft_after.png);
+}
+.boy_bike{
+    width: 128px;
+    height: 76px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    background-image: url(../images/sub/boy_bike.png);
+    background-repeat: no-repeat;
+}
+.boy_right{
+    width: 68px;
+    height: 81px;
+    position: absolute;
+    left: 39px;
+    bottom: 16px;
+    background-image: url(../images/sub/boyright_before.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.boy_right.after {
+    background-image: url(../images/sub/boyright_after.png);
+}
+.boy_body{
+    width: 64px;
+    height: 84px;
+    position: absolute;
+    left: 38px;
+    bottom: 91px;
+    background-image: url(../images/sub/boy_body.png);
+    background-repeat: no-repeat;
+}
+
+/* girl */
+.girl{
+    width: 150px;
+    height: 159px;
+    position: absolute;
+    left: 20%;
+    bottom: 140px;
+    background-image: url(../images/sub/girl_shadow.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: girlAni 15s infinite linear;
+}
+@keyframes girlAni {
+    0%, 100% {left: 30%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    45% {left: 90%;   
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    46% {left: 90%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    99% {left: 30%;   
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+}
+.girl_wheel{
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    background-image: url(../images/sub/girl_wheel.png);
+    background-repeat: no-repeat;
+    animation: wheelRotate .3s infinite linear;
+}
+.girl .leftWheel{
+    left: 0;
+    bottom: 0;
+    transform: rotate(-30deg);
+}
+.girl .rightWheel{
+    right: 0;
+    bottom: 0;
+    transform: rotate(30deg);
+}
+.girl_left{
+    width: 48px;
+    height: 83px;
+    position: absolute;
+    left: 44px;
+    bottom: 2px;
+    background-image: url(../images/sub/girlleft_before.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.girl_left.after {
+    background-image: url(../images/sub/girlleft_after.png);
+}
+.girl_bike{
+    width: 106px;
+    height: 77px;
+    position: absolute;
+    left: 19px;
+    bottom: 17px;
+    background-image: url(../images/sub/girl_bike.png);
+    background-repeat: no-repeat;
+}
+.girl_right{
+    width: 68px;
+    height: 81px;
+    position: absolute;
+    left: 45px;
+    bottom: 2px;
+    background-image: url(../images/sub/girlright_before.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.girl_right.after {
+    background-image: url(../images/sub/girlright_after.png);
+}
+.girl_body{
+    width: 86px;
+    height: 84px;
+    position: absolute;
+    left: 24px;
+    bottom: 77px;
+    background-image: url(../images/sub/girl_body.png);
+    background-repeat: no-repeat;
+}
+
+/* mom */
+.mom{
+    width: 206px;
+    height: 218px;
+    position: absolute;
+    left: 35%;
+    bottom: 100px;
+    background-image: url(../images/sub/mom_shadow.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    animation: momAni 12s infinite linear;
+}
+
+@keyframes momAni {
+    0%, 100% {left: 35%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    40% {left: 85%;   
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    41% {left: 85%;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    75% {left: 10%;   
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);}
+    76% {left: 10%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+    99% {left: 34%;   
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);}
+}
+.mom_wheel{
+    width: 73px;
+    height: 74px;
+    position: absolute;
+    background-image: url(../images/sub/mom_wheel.png);
+    background-repeat: no-repeat;
+    animation: wheelRotate .3s infinite linear;
+}
+.mom .leftWheel{
+    left: 0;
+    transform: rotate(-30deg);
+    bottom: 0;
+}
+.mom .rightWheel{
+    right: 0;
+    bottom: 0;
+    transform: rotate(30deg);
+}
+.mom_left{
+    width: 62px;
+    height: 96px;
+    position: absolute;
+    left: 52px;
+    bottom: 22px;
+    background-image: url(../images/sub/momleft_before.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.mom_left.after {
+    background-image: url(../images/sub/momleft_after.png);
+}
+.mom_bike{
+    width: 166px;
+    height: 101px;
+    position: absolute;
+    left: 8px;
+    bottom: 23px;
+    background-image: url(../images/sub/mom_bike.png);
+    background-repeat: no-repeat;
+}
+.mom_right{
+    width: 69px;
+    height: 103px;
+    position: absolute;
+    left: 46px;
+    bottom: 19px;
+    background-image: url(../images/sub/momright_before.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.mom_right.after {
+    background-image: url(../images/sub/momright_after.png);
+}
+.mom_body{
+    width: 105px;
+    height: 105px;
+    position: absolute;
+    left: 35px;
+    bottom: 114px;
+    background-image: url(../images/sub/mom_body.png);
+    background-repeat: no-repeat;
+}
